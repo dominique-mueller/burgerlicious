@@ -1,0 +1,6 @@
+{
+	"paths": {
+		"src": "./src",
+		"dest": "./build"
+	}
+}
