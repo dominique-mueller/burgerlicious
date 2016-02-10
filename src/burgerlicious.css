@@ -1,0 +1,66 @@
+/*
+ * Burger element
+ */
+
+.dm-burger {
+    position: absolute;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+
+    transform: translateZ(0) rotate(0);
+}
+
+/*
+ * Burger lines
+ */
+
+.dm-burger-top,
+.dm-burger-middle,
+.dm-burger-bottom {
+    transform-origin: 16px 16px;
+}
+
+.dm-burger-top,
+.dm-burger-bottom {
+    transform: translateY(0) rotate(0);
+}
+
+.dm-burger-middle {
+    opacity: 1;
+
+    transform: scaleX(1);
+}
+
+/*
+ * Burger animations (including different rotations)
+ */
+
+.dm-burger.rotate-right.is-open {
+    transform: translateZ(0) rotate(270deg);
+}
+
+.dm-burger.rotate-left.is-open {
+    transform: translateZ(0) rotate(-270deg);
+}
+
+.dm-burger.rotate-right.is-open .dm-burger-top {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.dm-burger.rotate-left.is-open .dm-burger-top {
+    transform: translateY(6px) rotate(-45deg);
+}
+
+.dm-burger.rotate-right.is-open .dm-burger-bottom {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.dm-burger.rotate-left.is-open .dm-burger-bottom {
+    transform: translateY(-6px) rotate(45deg);
+}
+
+.dm-burger.is-open .dm-burger-middle {
+    opacity: 0;
+
+    transform: scaleX(.1);
+}
