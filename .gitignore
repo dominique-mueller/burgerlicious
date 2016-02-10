@@ -1,0 +1,6 @@
+# Development stuff
+*.todo
+
+# Dev dependencies
+node_modules
+build
