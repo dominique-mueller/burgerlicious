@@ -1,0 +1,28 @@
+{
+	"name": "burgerlicious",
+	"description": "Yummy! Burgerlicious is the animated burger icon you always wanted. SVG-based, dependency-free, customizable.",
+	"version": "1.0.0",
+	"author": {
+		"name": "Dominique Müller",
+		"email": "hello@dominique-mueller.de",
+		"url": "https://www.dominique-mueller.de/"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dominique-mueller/burgerlicious.git"
+	},
+	"bugs": {
+		"url": "https://github.com/dominique-mueller/burgerlicious/issues"
+	},
+	"homepage": "https://github.com/dominique-mueller/burgerlicious",
+	"keywords": [
+		"burgerlicious",
+		"burger",
+		"burger icon",
+		"burger menu",
+		"animated burger",
+		"burger javascript",
+		"burger js"
+	]
+}
