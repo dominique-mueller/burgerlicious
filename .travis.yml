@@ -16,6 +16,7 @@ branches:
   only:
     - develop
     - /^release\/.*$/
+    - master
 before_script:
   - "echo 'Done!'"
   - "echo 'Starting build ...'"
