@@ -25,11 +25,15 @@ script:
 after_success:
   - "echo 'Done!'"
   - "echo 'Comitting changes to repository ...'"
+  - git config --global push.default simple
   - git config --global user.name "Dominique Müller"
   - git config --global user.email "dominique.m.mueller@gmail.com"
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - git add --all && git commit -m "Automatic Travis CI build" && git push
+  - git checkout TRAVIS_BRANCH
+  - git add --all
+  - git commit -m "Automatic Travis CI build"
+  - git push
   - "echo 'Done!'"
 before_deploy:
   - "echo 'Starting deploy ...'"
