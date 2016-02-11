@@ -15,7 +15,6 @@ install:
 branches:
   only:
     - develop
-    - /^release\/.*$/
     - master
 before_script:
   - "echo 'Done!'"
@@ -44,7 +43,6 @@ deploy:
   api_key: NPM_TOKEN
   skip_cleanup: true
   on:
-    tags: true
     branch: master
     repo: dominique-mueller/burgerlicious
 after_deploy:
