@@ -15,12 +15,6 @@
  */
 
 .dm-burger-top,
-.dm-burger-middle,
-.dm-burger-bottom {
-    transform-origin: 16px 16px;
-}
-
-.dm-burger-top,
 .dm-burger-bottom {
     transform: translateY(0) rotate(0);
 }

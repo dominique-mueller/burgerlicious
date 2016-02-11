@@ -1,13 +1,13 @@
 /*!
  * Burgerlicious
  *
- * Yummy! Burgerlicious is the animated burger icon you always wanted. SVG-based, dependency-free, customizable.
+ * Yummy! Burgerlicious is the animated burger icon you always wanted. SVG-based, dependency-free, customizable. And ES6-ready.
  *
  * @author 	   Dominique Müller <hello@dominique-mueller.de>
  * @copyright  Dominique Müller
  * @license    MIT <http://opensource.org/licenses/MIT>
  * @link 	   Github <https://github.com/dominique-mueller/burgerlicious>
- * @version    1.0.0
+ * @version    1.0.1
  */
 
 /* ==========  POLYFILL FOR CUSTOM EVENTS  ========== */
@@ -136,6 +136,7 @@ export class Burger {
 		middleLine.setAttributeNS( null, 'y1', 16 + extraSpace );
 		middleLine.setAttributeNS( null, 'x2', 26 + extraSpace );
 		middleLine.setAttributeNS( null, 'y2', 16 + extraSpace );
+		middleLine.style.transformOrigin = `${16 + extraSpace}px ${16 + extraSpace}px`;
 
 		// Set line stroke and color
 		middleLine.setAttributeNS( null, 'stroke', this._options.get( 'lineColor' ) );

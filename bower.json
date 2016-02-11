@@ -1,6 +1,6 @@
 {
 	"name": "burgerlicious",
-	"description": "Yummy! Burgerlicious is the animated burger icon you always wanted. SVG-based, dependency-free, customizable.",
+	"description": "Yummy! Burgerlicious is the animated burger icon you always wanted. SVG-based, dependency-free, customizable. And ES6-ready.",
 	"authors": [
 		{
 			"name": "Dominique Müller",

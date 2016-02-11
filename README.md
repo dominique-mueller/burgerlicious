@@ -1,16 +1,15 @@
+[![GitHub version](https://badge.fury.io/gh/dominique-mueller%2Fburgerlicious.svg)](https://badge.fury.io/gh/dominique-mueller%2Fburgerlicious)
+[![Bower version](https://badge.fury.io/bo/burgerlicious.svg)](https://badge.fury.io/bo/burgerlicious)
+[![npm version](https://badge.fury.io/js/burgerlicious.svg)](https://badge.fury.io/js/burgerlicious)
+[![devDependency Status](https://david-dm.org/dominique-mueller/burgerlicious/dev-status.svg)](https://david-dm.org/dominique-mueller/burgerlicious#info=devDependencies)
+[![Semver](http://img.shields.io/SemVer/2.0.0.png)](http://semver.org/spec/v2.0.0.html)
+[![Build Status](https://travis-ci.org/dominique-mueller/burgerlicious.svg?branch=master)](https://travis-ci.org/dominique-mueller/burgerlicious)
+
 # Burgerlicious
 
-Yummy! Burgerlicious is *the* animated burger icon you always wanted. SVG-based, dependency-free, customizable.
+Yummy! Burgerlicious is *the* animated burger icon you always wanted.<br>*SVG-based, dependency-free, customizable. And ES6-ready.*
 
-<br>
-
-## Table of contents
-
-1. [How to install the burger](#how-to-install-the-burger)
-2. [How to use the burger](#how-to-use-the-burger)
-3. [Advanced ways of using the burger](#advanced-ways-of-using-the-burger)
-4. [Browser support](#browser-support)
-5. [Creator](#creator)
+![Burgerlicious Animations](/documentation/burgerlicious_animations.gif?raw=true)
 
 ---
 
@@ -19,8 +18,6 @@ Yummy! Burgerlicious is *the* animated burger icon you always wanted. SVG-based,
 - Details about **contributing** can be found [right here](https://github.com/dominique-mueller/burgerlicious/blob/master/CONTRIBUTING.md).
 - Details about the **license** can be found [right here](https://github.com/dominique-mueller/burgerlicious/blob/master/LICENSE).
 - A detailed **changelog** is available [right here](https://github.com/dominique-mueller/burgerlicious/blob/master/CHANGELOG.md).
-
----
 
 <br>
 

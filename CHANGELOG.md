@@ -4,7 +4,25 @@ Similar to our [GitHub releases page](https://github.com/dominique-mueller/burge
 
 <br>
 
-## 1.0.0 (2016-02-10)
+## [1.0.1](https://github.com/dominique-mueller/burgerlicious/releases/tag/1.0.1) (2016-02-11)
+
+**Bugfixes**
+
+* Fixed rotation center issue when lineThickness set to an odd number
+
+**Documentation**
+
+* Added badges
+* Added representative screenshot
+* Extended description
+
+**Development**
+
+* Untracked build files from git
+
+<br>
+
+## [1.0.0](https://github.com/dominique-mueller/burgerlicious/releases/tag/1.0.0) (2016-02-10)
 
 **Initial first release**
 
