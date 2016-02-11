@@ -7,7 +7,7 @@
  * @copyright  Dominique Müller
  * @license    MIT <http://opensource.org/licenses/MIT>
  * @link 	   Github <https://github.com/dominique-mueller/burgerlicious>
- * @version    1.0.0
+ * @version    1.0.1
  */
 
 /* ==========  POLYFILL FOR CUSTOM EVENTS  ========== */
