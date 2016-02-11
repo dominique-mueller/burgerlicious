@@ -136,6 +136,7 @@ export class Burger {
 		middleLine.setAttributeNS( null, 'y1', 16 + extraSpace );
 		middleLine.setAttributeNS( null, 'x2', 26 + extraSpace );
 		middleLine.setAttributeNS( null, 'y2', 16 + extraSpace );
+		middleLine.style.transformOrigin = `${16 + extraSpace}px ${16 + extraSpace}px`;
 
 		// Set line stroke and color
 		middleLine.setAttributeNS( null, 'stroke', this._options.get( 'lineColor' ) );
