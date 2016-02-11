@@ -1,7 +1,8 @@
 /*!
  * Burgerlicious
  *
- * Yummy! Burgerlicious is the animated burger icon you always wanted. SVG-based, dependency-free, customizable. And ES6-ready.
+ * Yummy! Burgerlicious is the animated burger icon you always wanted.
+ * SVG-based, dependency-free, customizable. And ES6-ready.
  *
  * @author 	   Dominique Müller <hello@dominique-mueller.de>
  * @copyright  Dominique Müller

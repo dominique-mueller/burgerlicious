@@ -11,6 +11,8 @@ Yummy! Burgerlicious is *the* animated burger icon you always wanted.<br>*SVG-ba
 
 ![Burgerlicious Animations](/documentation/burgerlicious_animations.gif?raw=true)
 
+<br>
+
 ---
 
 **This document contains only the documentation for developers!**
@@ -18,6 +20,8 @@ Yummy! Burgerlicious is *the* animated burger icon you always wanted.<br>*SVG-ba
 - Details about **contributing** can be found [right here](https://github.com/dominique-mueller/burgerlicious/blob/master/CONTRIBUTING.md).
 - Details about the **license** can be found [right here](https://github.com/dominique-mueller/burgerlicious/blob/master/LICENSE).
 - A detailed **changelog** is available [right here](https://github.com/dominique-mueller/burgerlicious/blob/master/CHANGELOG.md).
+
+---
 
 <br>
 
