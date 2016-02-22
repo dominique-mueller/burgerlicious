@@ -1,8 +1,8 @@
 # Dependencies
 node_modules
 
-# Build
-build
+# Build - disabled so that Travis CI can do its thing
+# build
 
 # Development stuff
 *.todo
