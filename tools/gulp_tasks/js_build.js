@@ -12,7 +12,7 @@ import uglify 	from 'gulp-uglify';
  * Uglify options
  */
 const uglifyOptions = {
-	preserveComments: 'license'
+	'preserveComments': 'license'
 };
 
 /*
@@ -20,10 +20,12 @@ const uglifyOptions = {
  * ------------------------------
  * Here we transpile ES6 to ES5, uglify and save the code into the build folder
  */
-export default gulp.task( 'js', () => {
+export default gulp.task( 'js:build', () => {
+
+	return gulp
 
 		// Get JS file
-	gulp.src( config.paths.src + '/burgerlicious.js' )
+		.src( `${config.paths.src}/burgerlicious.js` )
 
 		// Transpile ES6 code to ES5 code
 		.pipe( babel() )

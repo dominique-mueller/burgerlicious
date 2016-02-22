@@ -3,10 +3,10 @@
 /*
  * Imports
  */
-import cssBase 		from './gulp/css-base';
-import css 			from './gulp/css';
-import jsBase 		from './gulp/js-base';
-import js 			from './gulp/js';
+import cssBase 		from './tools/gulp_tasks/css_base';
+import css 			from './tools/gulp_tasks/css_build';
+import jsBase 		from './tools/gulp_tasks/js_base';
+import js 			from './tools/gulp_tasks/js_build';
 import gulp 		from 'gulp';
 import gutil 		from 'gulp-util';
 import runSequence 	from 'run-sequence';
@@ -21,13 +21,11 @@ import runSequence 	from 'run-sequence';
  * - Then we build the transpiled / optimized versions
  */
 gulp.task( 'build', ( done ) => {
-	gutil.log( 'Automated build process started ...' );
 	runSequence(
-		[ 'css-base', 'js-base' ],
-		[ 'css', 'js' ],
+		[ 'css:base', 'js:base' ],
+		[ 'css:build', 'js:build' ],
 		done
 	);
-	gutil.log( 'Build process successfully finished.' );
 } );
 
 /*
@@ -35,4 +33,4 @@ gulp.task( 'build', ( done ) => {
  * ---------------
  * This task only validates and formats the original source code
  */
-gulp.task( 'codecheck', [ ' css-base', 'js-base' ] );
+gulp.task( 'codecheck', [ ' css:base', 'js:base' ] );

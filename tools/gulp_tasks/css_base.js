@@ -11,17 +11,20 @@ import gulp 	from 'gulp';
  * -------------
  * Here we format and lint our original source file
  */
-export default gulp.task( 'css-base', () => {
+export default gulp.task( 'css:base', () => {
+
+	return gulp
 
 		// Get CSS file
-	gulp.src( config.paths.src + '/burgerlicious.css' )
+		.src( `${config.paths.src}/burgerlicious.css` )
 
 		// Format CSS
-		.pipe( csscomb() )
+		.pipe( csscomb( './.csscomb.json' ) )
 
 		// Lint CSS
-		.pipe( csslint() )
+		.pipe( csslint( './.csslintrc' ) )
 		.pipe( csslint.reporter() )
+		.pipe( csslint.failReporter() )
 
 		// Update CSS file
 		.pipe( gulp.dest( config.paths.src ) );
