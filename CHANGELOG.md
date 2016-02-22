@@ -4,6 +4,20 @@ Similar to our [GitHub releases page](https://github.com/dominique-mueller/burge
 
 <br>
 
+## [1.0.2](https://github.com/dominique-mueller/burgerlicious/releases/tag/1.0.2) (2016-02-22)
+
+**Bugfixes**
+
+* Added main files into NPM and bower manifests
+
+**Development**
+
+* Added .github folder (containing CONTRIBUTING guideline and issue template)
+* Updated and fixed Gulp tasks
+* Updated NPM dependencies
+
+<br>
+
 ## [1.0.1](https://github.com/dominique-mueller/burgerlicious/releases/tag/1.0.1) (2016-02-11)
 
 **Bugfixes**
