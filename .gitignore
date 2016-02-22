@@ -1,6 +1,9 @@
+# Dependencies
+node_modules
+build
+
 # Development stuff
 *.todo
 
-# Dev dependencies
-node_modules
-build
+# Editor files
+*.sublime-workspace
