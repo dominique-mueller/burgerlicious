@@ -20,6 +20,8 @@ In order to make the issue more informative you might add some of the following 
 - Details about operating system & browser you're using
 - Include screenshots (maybe also of the browser dev tools, e.g. the console)
 
+When opening a new issue, a template will be presented to you. Please try to stick to this template but in some cases you may change or extend the issue.
+
 <br>
 
 ## Need a feature?
