@@ -26,8 +26,17 @@
 	"moduleType": [
 		"es6"
 	],
+	"main": [
+		"./src/burgerlicious.js",
+		"./src/burgerlicious.css"
+	],
 	"ignore": [
-		"**./*",
-		"node_modules"
+		".*",
+		".github",
+		"documentation",
+		"tools",
+		"node_modules",
+		"gulpfile.babel.js",
+		"burgerlicious.sublime-project"
 	]
 }

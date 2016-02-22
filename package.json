@@ -1,7 +1,7 @@
 {
 	"name": "burgerlicious",
 	"description": "Yummy! Burgerlicious is the animated burger icon you always wanted. SVG-based, dependency-free, customizable. And ES6-ready.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": {
 		"name": "Dominique Müller",
 		"email": "hello@dominique-mueller.de",
@@ -25,9 +25,10 @@
 		"burger javascript",
 		"burger js"
 	],
+	"main": "./src/burgerlicious.js",
 	"devDependencies": {
 		"babel-core": "6.5.x",
-		"babel-eslint": "4.1.x",
+		"babel-eslint": "5.0.x",
 		"babel-plugin-transform-es2015-modules-umd": "6.5.x",
 		"babel-preset-es2015": "6.5.x",
 		"gulp": "3.9.x",
@@ -36,8 +37,7 @@
 		"gulp-csscomb": "3.0.x",
 		"gulp-csslint": "0.2.x",
 		"gulp-cssmin": "0.1.x",
-		"gulp-eslint": "1.1.x",
-		"gulp-jscs": "3.0.x",
+		"gulp-eslint": "2.0.x",
 		"gulp-rename": "1.2.x",
 		"gulp-uglify": "1.5.x",
 		"gulp-util": "3.0.x",

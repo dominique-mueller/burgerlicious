@@ -1,4 +1,4 @@
-/*!
+/**
  * Burgerlicious
  *
  * Yummy! Burgerlicious is the animated burger icon you always wanted.
@@ -8,14 +8,14 @@
  * @copyright  Dominique Müller
  * @license    MIT <http://opensource.org/licenses/MIT>
  * @link 	   Github <https://github.com/dominique-mueller/burgerlicious>
- * @version    1.0.1
+ * @version    1.0.2
  */
 
 /* ==========  POLYFILL FOR CUSTOM EVENTS  ========== */
 
 /* eslint-disable */
 
-/*
+/**
  * Polyfill for creating custom events, will be used in IE9+
  *
  * Taken from the Mozilla developer site:
@@ -36,13 +36,13 @@
 
 /* ==========  VARIABLES  ========== */
 
-/*
+/**
  * SVG namespace
  * @type  {String}
  */
 const SVGNS = 'http://www.w3.org/2000/svg';
 
-/*
+/**
  * Default options
  * @type  {Object}
  */
@@ -53,7 +53,7 @@ const DEFAULTOPTIONS = new Map( [
 	[ 'animationDuration', 500 ]
 ] );
 
-/*
+/**
  * Events
  * @type  {Map}
  */
@@ -66,17 +66,17 @@ const EVENTS = new Map( [
 
 /* ==========  CLASSES  ========== */
 
-/*
+/**
  * Burger class
  */
 export class Burger {
 
-	/*
+	/**
 	 * Burger constructor
 	 * ------------------
 	 * Setup and configuration
 	 *
-	 * @param  {DOM Element}  element    Burger button DOM element
+	 * @param  {DOMElement}  element    Burger button DOM element
 	 * @param  {Object} 	  [options]  Burger options object
 	 */
 	constructor( element, options ) {
@@ -105,12 +105,12 @@ export class Burger {
 
 	}
 
-	/*
+	/**
 	 * Build the svg burger icon
 	 * -------------------------
 	 * In here we build the svg icon as well as add classes and styles.
 	 *
-	 * @return  {DOM element}  Reference to the svg DOM element
+	 * @return  {DOMElement}  Reference to the svg DOM element
 	 */
 	build() {
 
@@ -119,7 +119,7 @@ export class Burger {
 		svg.setAttributeNS( null, 'width', '32' );
 		svg.setAttributeNS( null, 'height', '32' );
 		svg.setAttributeNS( null, 'viewBox', '0 0 32 32' );
-		svg.setAttributeNS( null, 'class', 'dm-burger rotate-' + this._options.get( 'animationRotation' ) );
+		svg.setAttributeNS( null, 'class', `dm-burger rotate-${this._options.get( 'animationRotation' )}` );
 
 		// Create groups
 		const topGroup = document.createElementNS( SVGNS, 'g' );
@@ -152,9 +152,9 @@ export class Burger {
 
 		// Set animations
 		if ( this._options.get( 'animationDuration' ) !== 0 ) {
-			const animationSlow = this._options.get( 'animationDuration' ) + 'ms';
-			const animationMedium = this._options.get( 'animationDuration' ) / 1.5 + 'ms';
-			const animationFast = this._options.get( 'animationDuration' ) / 3 + 'ms';
+			const animationSlow = `${this._options.get( 'animationDuration' )}ms`;
+			const animationMedium = `${this._options.get( 'animationDuration' ) / 1.5}ms`;
+			const animationFast = `${this._options.get( 'animationDuration' ) / 3}ms`;
 			svg.style.transition = `transform ${animationSlow} ease-in-out`;
 			topLine.style.transition = `transform ${animationSlow} ease-in-out`;
 			bottomLine.style.transition = `transform ${animationSlow} ease-in-out`;
@@ -190,14 +190,18 @@ export class Burger {
 
 	}
 
-	/*
+	/**
 	 * Toggle the burger
 	 */
 	toggle() {
-		this._isOpen ? this.close() : this.open();
+		if ( this._isOpen ) {
+			this.close();
+		} else {
+			this.open();
+		}
 	}
 
-	/*
+	/**
 	 * Open the burger
 	 */
 	open() {
@@ -222,7 +226,7 @@ export class Burger {
 
 	}
 
-	/*
+	/**
 	 * Close the burger
 	 */
 	close() {
@@ -255,7 +259,7 @@ export class Burger {
 		return this._isOpen;
 	}
 
-	/*
+	/**
 	 * Add an event listener
 	 * ---------------------
 	 * This is just a shorter way of listening to burger events.
@@ -267,7 +271,7 @@ export class Burger {
 		document.addEventListener( `burgerlicious.${event}`, callback );
 	}
 
-	/*
+	/**
 	 * Remove an event listener
 	 * ------------------------
 	 * This is just a shorter way of removing listeners for burger events.

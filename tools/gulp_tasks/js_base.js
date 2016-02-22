@@ -4,12 +4,11 @@
 import config 	from './config.json';
 import eslint 	from 'gulp-eslint';
 import gulp 	from 'gulp';
-import jscs 	from 'gulp-jscs';
 
-/*
- * JSCS options
+/**
+ * eslint options
  */
-const jscsOptions = {
+const eslintOptions = {
 	'fix': true
 };
 
@@ -18,18 +17,18 @@ const jscsOptions = {
  * --------------------
  * Here we format and lint our original source file
  */
-export default gulp.task( 'js-base', () => {
+export default gulp.task( 'js:base', () => {
+
+	return gulp
 
 		// Get JS file
-	gulp.src( config.paths.src + '/burgerlicious.js' )
+		.src( `${config.paths.src}/burgerlicious.js` )
 
-		// Format JS
-		.pipe( jscs( jscsOptions ) )
-		.pipe( jscs.reporter() )
-
-		// Lint JS
-		.pipe( eslint() )
+		// Lint and format JS
+		.pipe( eslint( './.eslintrc.json' ) )
+		.pipe( eslint( eslintOptions ) )
 		.pipe( eslint.format() )
+		.pipe( eslint.failOnError() )
 
 		// Update JS file
 		.pipe( gulp.dest( config.paths.src ) );
