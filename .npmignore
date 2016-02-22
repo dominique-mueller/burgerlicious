@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+
+# Gulp
+gulpfile.babel.js
+tools
+
+# Configuration files
+.*
+.github
+burgerlicious.sublime-project
+browserlist
+
+# Documentation
+documentation

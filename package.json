@@ -25,6 +25,7 @@
 		"burger javascript",
 		"burger js"
 	],
+	"main": "./src/burgerlicious.js",
 	"devDependencies": {
 		"babel-core": "6.5.x",
 		"babel-eslint": "5.0.x",
