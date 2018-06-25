@@ -1,22 +1,29 @@
-$burgerlicious-color: #333 !default;
-$burgerlicious-weight: 2px !default;
-$burgerlicious-animation-speed: .5s !default;
-$burgerlicious-rotation: 'right' !default; // TODO: Throw error if not left / right
+// Variables
+
+$burgerlicious__button--width: 32px !default;
+$burgerlicious__button--height: 32px !default;
+$burgerlicious__burger--color: #333 !default;
+$burgerlicious__burger--weight: 2px !default;
+$burgerlicious__burger--animation-speed: .5s !default;
+$burgerlicious__burger--animation-rotation: 'right' !default; // TODO: Throw error if not left / right
+
+// Styles
 
 .burgerlicious {
 
 	&.is-open {
-		@if $burgerlicious-rotation == 'right' {
+		@if $burgerlicious__burger--animation-rotation == 'right' {
 			transform: rotate(270deg);
-		} @else if $bugerlicious-rotation == 'left' {
+		} @else if $bugerlicious__burger--animation-rotation == 'left' {
 			transform: rotate(-270deg);
 		}
 	}
 
 	&__button {
 		position: relative;
-		width: 32px;
-		height: 32px;
+		width: $burgerlicious__button--width;
+		height: $burgerlicious__button--height;
+		padding: ( ( $burgerlicious__button--height - 32px ) / 2 ) ( ( $burgerlicious__button--width - 32px ) / 2 );
 		background: none; // Reset
 		border: none; // Reset
 		box-shadow: none; // Reset
@@ -25,21 +32,21 @@ $burgerlicious-rotation: 'right' !default; // TODO: Throw error if not left / ri
 
 	&__icon {
 		transform: rotate(0);
-		transition: transform $burgerlicious-animation-speed ease-in-out;
+		transition: transform $burgerlicious__burger--animation-speed ease-in-out;
 	}
 
 	&__line {
-		stroke: $burgerlicious-color;
-		stroke-width: $burgerlicious-weight;
+		stroke: $burgerlicious__burger--color;
+		stroke-width: $burgerlicious__burger--weight;
 
 		&--top {
 			transform: translateY(0) rotate(0);
-			transition: transform $burgerlicious-animation-speed ease-in-out;
+			transition: transform $burgerlicious__burger--animation-speed ease-in-out;
 
 			.burgerlicious.is-open & {
-				@if $burgerlicious-rotation == 'right' {
+				@if $burgerlicious__burger--animation-rotation == 'right' {
 					transform: translateY(6px) rotate(45deg);
-				} @else if $bugerlicious-rotation == 'left' {
+				} @else if $bugerlicious__burger--animation-rotation == 'left' {
 					transform: translateY(6px) rotate(-45deg);
 				}
 			}
@@ -48,8 +55,8 @@ $burgerlicious-rotation: 'right' !default; // TODO: Throw error if not left / ri
 
 		&--middle {
 			transform: scaleX(1);
-			transition: opacity ( $burgerlicious-animation-speed / 1.5 ) ease-in-out ( $bugerlicious-animation-speed / 3 ),
-						transform ( $burgerlicious-animation-speed / 1.5 ) ease-in-out ( $bugerlicious-animation-speed / 3 );
+			transition: opacity ( $burgerlicious__burger--animation-speed / 1.5 ) ease-in-out ( $bugerlicious-animation-speed / 3 ),
+						transform ( $burgerlicious__burger--animation-speed / 1.5 ) ease-in-out ( $bugerlicious-animation-speed / 3 );
 
 			.burgerlicious.is-open & {
 				opacity: 0;
@@ -60,12 +67,12 @@ $burgerlicious-rotation: 'right' !default; // TODO: Throw error if not left / ri
 
 		&--bottom {
 			transform: scaleX(1);
-			transition: transform $burgerlicious-animation-speed ease-in-out;
+			transition: transform $burgerlicious__burger--animation-speed ease-in-out;
 
 			.burgerlicious.is-open & {
-				@if $burgerlicious-rotation == 'right' {
+				@if $burgerlicious__burger--animation-rotation == 'right' {
 					transform: translateY(-6px) rotate(45deg);
-				} @else if $bugerlicious-rotation == 'left' {
+				} @else if $bugerlicious__burger--animation-rotation == 'left' {
 					transform: translateY(-6px) rotate(-45deg);
 				}
 			}
