@@ -7,14 +7,14 @@
     top: calc(50% - 16px);
     left: calc(50% - 16px);
 
-    transform: translateZ(0) rotate(0);
+    /* transform: translateZ(0) rotate(0); */
 }
 
 /*
  * Burger lines
  */
 
-.dm-burger-top,
+/* .dm-burger-top,
 .dm-burger-bottom {
     transform: translateY(0) rotate(0);
 }
@@ -23,21 +23,21 @@
     opacity: 1;
 
     transform: scaleX(1);
-}
+} */
 
 /*
  * Burger animations (including different rotations)
  */
 
-.dm-burger.rotate-right.is-open {
+/* .dm-burger.rotate-right.is-open {
     transform: translateZ(0) rotate(270deg);
 }
 
 .dm-burger.rotate-left.is-open {
     transform: translateZ(0) rotate(-270deg);
-}
+} */
 
-.dm-burger.rotate-right.is-open .dm-burger-top {
+/* .dm-burger.rotate-right.is-open .dm-burger-top {
     transform: translateY(6px) rotate(45deg);
 }
 
@@ -57,4 +57,4 @@
     opacity: 0;
 
     transform: scaleX(.1);
-}
+} */
