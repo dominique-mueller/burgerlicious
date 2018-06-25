@@ -24,7 +24,13 @@
 		"animated",
 		"svg"
 	],
+	"scripts": {
+		"build": "node-sass ./src/burgerlicious.scss ./dist/burgerlicious.css && copyfiles ./src/burgerlicious.html dist --up 1",
+		"clean": "rimraf -r dist/**"
+	},
 	"devDependencies": {
-		"node-sass": "4.8.x"
+		"copyfiles": "2.0.x",
+		"node-sass": "4.9.x",
+		"rimraf": "2.6.x"
 	}
 }
