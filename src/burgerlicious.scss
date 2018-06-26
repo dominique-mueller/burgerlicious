@@ -11,14 +11,6 @@ $burgerlicious__burger--animation-rotation: 'right' !default; // TODO: Throw err
 
 .burgerlicious {
 
-	&.is-open {
-		@if $burgerlicious__burger--animation-rotation == 'right' {
-			transform: rotate(270deg);
-		} @else if $burgerlicious__burger--animation-rotation == 'left' {
-			transform: rotate(-270deg);
-		}
-	}
-
 	&__button {
 		position: relative;
 		width: $burgerlicious__button--width;
@@ -33,17 +25,27 @@ $burgerlicious__burger--animation-rotation: 'right' !default; // TODO: Throw err
 	&__icon {
 		transform: rotate(0);
 		transition: transform $burgerlicious__burger--animation-speed ease-in-out;
+
+		.burgerlicious__button.is-open & {
+			@if $burgerlicious__burger--animation-rotation == 'right' {
+				transform: rotate(270deg);
+			} @else if $burgerlicious__burger--animation-rotation == 'left' {
+				transform: rotate(-270deg);
+			}
+		}
+
 	}
 
 	&__line {
 		stroke: $burgerlicious__burger--color;
 		stroke-width: $burgerlicious__burger--weight;
+		transform-origin: 50% 50%;
 
 		&--top {
 			transform: translateY(0) rotate(0);
 			transition: transform $burgerlicious__burger--animation-speed ease-in-out;
 
-			.burgerlicious.is-open & {
+			.burgerlicious__button.is-open & {
 				@if $burgerlicious__burger--animation-rotation == 'right' {
 					transform: translateY(6px) rotate(45deg);
 				} @else if $burgerlicious__burger--animation-rotation == 'left' {
@@ -58,7 +60,7 @@ $burgerlicious__burger--animation-rotation: 'right' !default; // TODO: Throw err
 			transition: opacity ( $burgerlicious__burger--animation-speed / 1.5 ) ease-in-out ( $burgerlicious__burger--animation-speed / 3 ),
 						transform ( $burgerlicious__burger--animation-speed / 1.5 ) ease-in-out ( $burgerlicious__burger--animation-speed / 3 );
 
-			.burgerlicious.is-open & {
+			.burgerlicious__button.is-open & {
 				opacity: 0;
 				transform: scaleX(.1);
 			}
@@ -69,11 +71,11 @@ $burgerlicious__burger--animation-rotation: 'right' !default; // TODO: Throw err
 			transform: scaleX(1);
 			transition: transform $burgerlicious__burger--animation-speed ease-in-out;
 
-			.burgerlicious.is-open & {
+			.burgerlicious__button.is-open & {
 				@if $burgerlicious__burger--animation-rotation == 'right' {
-					transform: translateY(-6px) rotate(45deg);
-				} @else if $burgerlicious__burger--animation-rotation == 'left' {
 					transform: translateY(-6px) rotate(-45deg);
+				} @else if $burgerlicious__burger--animation-rotation == 'left' {
+					transform: translateY(-6px) rotate(45deg);
 				}
 			}
 
