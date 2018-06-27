@@ -1,36 +1,22 @@
 // Variables
 
-$burgerlicious__button--width: 32px !default;
-$burgerlicious__button--height: 32px !default;
-$burgerlicious__burger--color: #333 !default;
-$burgerlicious__burger--weight: 2px !default;
-$burgerlicious__burger--animation-speed: .5s !default;
-$burgerlicious__burger--animation-rotation: 'right' !default; // TODO: Throw error if not left / right
+$burgerlicious--color: #333 !default;
+$burgerlicious--weight: 2px !default;
+$burgerlicious--animation-speed: .5s !default;
+$burgerlicious--animation-rotation: 'right' !default; // TODO: Throw error if not left / right
 
 // Styles
 
 .burgerlicious {
 
-	&__button {
-		position: relative;
-		width: $burgerlicious__button--width;
-		height: $burgerlicious__button--height;
-		padding: ( ( $burgerlicious__button--height - 32px ) / 2 ) ( ( $burgerlicious__button--width - 32px ) / 2 );
-		background: none; // Reset
-		border: none; // Reset
-		box-shadow: none; // Reset
-		outline: none; // Reset
-		cursor: pointer; // Usability
-	}
-
 	&__icon {
 		transform: rotate(0);
-		transition: transform $burgerlicious__burger--animation-speed ease-in-out;
+		transition: transform $burgerlicious--animation-speed ease-in-out;
 
-		.burgerlicious__button.is-open & {
-			@if $burgerlicious__burger--animation-rotation == 'right' {
+		.burgerlicious.is-open & {
+			@if $burgerlicious--animation-rotation == 'right' {
 				transform: rotate(270deg);
-			} @else if $burgerlicious__burger--animation-rotation == 'left' {
+			} @else if $burgerlicious--animation-rotation == 'left' {
 				transform: rotate(-270deg);
 			}
 		}
@@ -50,18 +36,18 @@ $burgerlicious__burger--animation-rotation: 'right' !default; // TODO: Throw err
 	}
 
 	&__line {
-		stroke: $burgerlicious__burger--color;
-		stroke-width: $burgerlicious__burger--weight;
+		stroke: $burgerlicious--color;
+		stroke-width: $burgerlicious--weight;
 		transform-origin: 50% 50%;
 
 		&--top {
 			transform: translateY(0) rotate(0);
-			transition: transform $burgerlicious__burger--animation-speed ease-in-out;
+			transition: transform $burgerlicious--animation-speed ease-in-out;
 
-			.burgerlicious__button.is-open & {
-				@if $burgerlicious__burger--animation-rotation == 'right' {
+			.burgerlicious.is-open & {
+				@if $burgerlicious--animation-rotation == 'right' {
 					transform: translateY(6px) rotate(45deg);
-				} @else if $burgerlicious__burger--animation-rotation == 'left' {
+				} @else if $burgerlicious--animation-rotation == 'left' {
 					transform: translateY(6px) rotate(-45deg);
 				}
 			}
@@ -70,10 +56,10 @@ $burgerlicious__burger--animation-rotation: 'right' !default; // TODO: Throw err
 
 		&--middle {
 			transform: scaleX(1);
-			transition: opacity ( $burgerlicious__burger--animation-speed / 1.5 ) ease-in-out ( $burgerlicious__burger--animation-speed / 3 ),
-						transform ( $burgerlicious__burger--animation-speed / 1.5 ) ease-in-out ( $burgerlicious__burger--animation-speed / 3 );
+			transition: opacity ( $burgerlicious--animation-speed / 1.5 ) ease-in-out ( $burgerlicious--animation-speed / 3 ),
+						transform ( $burgerlicious--animation-speed / 1.5 ) ease-in-out ( $burgerlicious--animation-speed / 3 );
 
-			.burgerlicious__button.is-open & {
+			.burgerlicious.is-open & {
 				opacity: 0;
 				transform: scaleX(.1);
 			}
@@ -82,12 +68,12 @@ $burgerlicious__burger--animation-rotation: 'right' !default; // TODO: Throw err
 
 		&--bottom {
 			transform: scaleX(1);
-			transition: transform $burgerlicious__burger--animation-speed ease-in-out;
+			transition: transform $burgerlicious--animation-speed ease-in-out;
 
-			.burgerlicious__button.is-open & {
-				@if $burgerlicious__burger--animation-rotation == 'right' {
+			.burgerlicious.is-open & {
+				@if $burgerlicious--animation-rotation == 'right' {
 					transform: translateY(-6px) rotate(-45deg);
-				} @else if $burgerlicious__burger--animation-rotation == 'left' {
+				} @else if $burgerlicious--animation-rotation == 'left' {
 					transform: translateY(-6px) rotate(45deg);
 				}
 			}
