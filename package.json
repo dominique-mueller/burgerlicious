@@ -25,7 +25,7 @@
 		"svg"
 	],
 	"scripts": {
-		"build": "node-sass ./src/burgerlicious.scss ./dist/burgerlicious.css && copyfiles ./src/* dist --up 1",
+		"build": "node-sass ./src/burgerlicious.scss ./dist/src/burgerlicious.css && copyfiles ./src/* ./docs/* package.json CHANGELOG.md LICENSE README.md dist",
 		"clean": "rimraf -r dist/**"
 	},
 	"devDependencies": {
