@@ -1,228 +1,69 @@
-[![GitHub version](https://badge.fury.io/gh/dominique-mueller%2Fburgerlicious.svg)](https://badge.fury.io/gh/dominique-mueller%2Fburgerlicious)
-[![Bower version](https://badge.fury.io/bo/burgerlicious.svg)](https://badge.fury.io/bo/burgerlicious)
-[![npm version](https://badge.fury.io/js/burgerlicious.svg)](https://badge.fury.io/js/burgerlicious)
-[![devDependency Status](https://david-dm.org/dominique-mueller/burgerlicious/dev-status.svg)](https://david-dm.org/dominique-mueller/burgerlicious#info=devDependencies)
-[![Semver](http://img.shields.io/SemVer/2.0.0.png)](http://semver.org/spec/v2.0.0.html)
-[![Build Status](https://travis-ci.org/dominique-mueller/burgerlicious.svg?branch=master)](https://travis-ci.org/dominique-mueller/burgerlicious)
+<div align="center">
 
-# Burgerlicious
+# burgerlicious
 
-Yummy! Burgerlicious is *the* animated burger icon you always wanted.<br>*SVG-based, dependency-free, customizable. And ES6-ready.*
+**Yummy! Burgerlicious is _the_ animated burger icon you always wanted.<br>SVG-based, customizable via SASS, dependency-free.**
 
-![Burgerlicious Animations](/documentation/burgerlicious_animations.gif?raw=true)
+</div>
 
-<br>
+<br><br>
 
----
+## What it does
 
-**This document contains only the documentation for developers!**
+Some love it, some hate it: The burger icon, a three-lined icon synbolising a navigatable list. Why its Usability is debatable, it's for
+sure a neat and clean way to hide the bigger kind of menus behind a simple button.
 
-- Details about **contributing** can be found [right here](https://github.com/dominique-mueller/burgerlicious/blob/master/.github/CONTRIBUTING.md).
-- Details about the **license** can be found [right here](https://github.com/dominique-mueller/burgerlicious/blob/master/LICENSE).
-- A detailed **changelog** is available [right here](https://github.com/dominique-mueller/burgerlicious/blob/master/CHANGELOG.md).
+So, if you're searching for a beautifully animated burger icon based on SVG and SASS - you're there, you got it! Have fun!
 
----
+![Burgerlicious Animations](/docs/preview.gif?raw=true)
 
-<br>
+> **Browser compatibility:**<br>Due to the IE not being able to animate SVG via CSS, animations won't work in this browser! Progressive
+> Enhancement at its best!
 
-## How to install the burger
+<br><br><br>
 
-#### Using Bower
+## How to use
 
-```
-bower install burgerlicious --save
-```
+Using this burger means simple copy-pasting code into your project (mainly because including HTML files in the frontend, without
+backend / build steps, is quite a pain). The following files exist:
 
-#### Using NPM
+- `src/burgerlicious.html` contains the HTML part, in particiular the burger icon as SVG
+- `src/burgerlicious.scss` contains the styles as SASS, incl. variables & animations
 
-```
-npm install burgerlicious --save
-```
+> This project also comes with a build step (`npm run build`) to turn the SASS into plain CSS.
 
-#### Using GitHub
-
-```
-git clone https://github.com/dominique-mueller/burgerlicious.git
-```
-
-#### Add to your document
-
-Add the JavaScript file at the end of the html body or in your html head:
-
-``` html
-<!-- JavaScript (ES5 minified) -->
-<script src="[path_to_burgerlicious]/build/burgerlicious.es5.min.js"></script>
-```
-
-Then add the CSS file in your html head:
-
-``` html
-<!-- CSS (minified) -->
-<link rel="stylesheet" href="[path_to_burgerlicious]/build/burgerlicious.min.css">
-```
-
-#### Notes about JavaScript ES6
-
-This library is ES6-ready! But due to many browser not being 100% compatible with ES6 yet, I strongly recommend to use the ES5 version for now. If your project is entirely written in ES6 and you're planing to transpile it later on in your development process, you may use the ES6 version located at `src/burgerlicious.js`.
+Once included, you can toggle the burger on and off using the `is-open` class on the svg (with the class `burgerlicious`).
 
 <br>
 
-## How to use the burger
+### Customization
 
-#### Create the burger
+The following SASS variables can be used to customize the design of the burger:
 
-Creating the burger is really simple:
-
-``` javascript
-// First get the button you want to place the burger in
-var myButton = document.getElementById( 'awesome-btn' );
-
-// Then create the burger (here with default options)
-var myBurger = new burgerlicious.Burger( myButton );
-```
-
-> If you're using the ES6 version, you can import the burger as a module.
-
-#### Customize the burger
-
-With the code above you get the default burger. But I can see in your eyes that you want to do your own thing, and that's fine. Of course you can customize the burger in several ways so that it fits in your page like a beautiful unicorn.
-
-*Watch out: You can customize the burger only once and only at creation time!*
-
-``` javascript
-// First define your custom options (the following options are the default ones)
-var myBurgerOptions = {
-
-	// Define how thick the lines should be (in px)
-	'lineThickness': 2,
-
-	// Select a line color (in HEX, RGB, RGBA, ...)
-	'lineColor': '#111',
-
-	// Set the rotation direction
-	// ('right' means first rotation goes clockwise, 'left' means the opposite)
-	'animationRotation': 'right',
-
-	// Choose how long the animation should take (in ms)
-	// Sidenote: A value of 0 turns all animations off
-	'animationDuration': 500
-
-};
-
-// Then you can pass in the options object as the second parameter (when creating the burger)
-var myBurger = new burgerlicious.Burger( myButton, myBurgerOptions );
-```
-
-### Quick Tip: The burger button
-
-Well, semantically you definitely should use a button for the burger icon. But per default buttons just don't look very good. So in order to make a button which is invisible, use the following styles in your css file:
-
-``` css
-/*
- * Width and height are just examples,
- * all the other attributes should make the button transparent
- */
-.myButton {
-	width: 50px;
-	height: 50px;
-	padding: 0;
-	background: none;
-	border: none;
-	cursor: pointer;
-}
-```
+- `$burgerlicious--color` defines the line color *(defaults to `#333`)*
+- `$burgerlicious--weight` defines the line stroke width (preferably even numbers) *(defaults to `2px`)*
+- `$burgerlicious--animation-speed` defines the complete animation duration *(defaults to `.5s`)*
+- `$burgerlicious--animation-rotation` defines the animation rotation direction (`left` or `right`) *(defaults to `right`)*
 
 <br>
 
-## Advanced ways of using the burger
+### On Usability & Accessibility
 
-When creating the burger, it's active. It's working. You can lean back and see the burger do it's work. But: Some people might think about doing some advanced stuff. They need more control. Maybe you're one of these persons.
+Both usability and accessibility of the burger menu could be improved by:
 
-#### Control the burger
+- placing the burger inside an actual `<button type="button">` node
+- making the burger button more affordable
+- adding a short label such as "Menu" or "Navigation" below or above the burger icon
+- putting a tooltip on top of the icon (e.g. using the `title` attribute)
+- adding accessibility nodes to the SVG, such as `<title>` or `desc`
+- disable animations if the user prefers reduced motion / no motion at all
 
-With the following lines of code you can control the burger manually, from inside your own JavaScript code:
-
-``` javascript
-// You can toggle the burger
-myBurger.toggle();
-
-// You can also open the burger (turn it into an x)
-myBurger.open();
-
-// And you can close the burger (get the burger back)
-myBurger.close();
-```
-
-#### Check the burger status
-
-You want to know at some point whether the burger is currently open or not? Here's how you can do that:
-
-``` javascript
-// Check if the burger is open (returns true or false)
-var isMyBurgerOpen = myBurger.isOpen();
-```
-
-#### Handling burger events
-
-But wait, there's more. Maybe you want to get notified and do some action if a user starts using your burger. For this reason you can listen to some special burger events.
-
-There is a short version for that, but of course you can use vanilla JavaScript or jQuery for fetching these events:
-
-``` javascript
-// Use the short version (recommended)
-myBurger.on( 'open', function handleEvent() { ... } );
-
-// Use the vanilla JavaScript way of listening to events
-document.addEventListener( 'burgerlicious.open', function handleEvent() { ... } );
-
-// Or even use jQuery for that
-$( 'document' ).on( 'burgerlicious.open', function handleEvent() { ... } );
-```
-
-And you might want to remove event listeners with the following:
-
-``` javascript
-// Use the short version (recommended)
-myBurger.off( 'open', handleEvent );
-
-// Use the vanilla JavaScript way of removing event listeners
-document.removeEventListener( 'burgerlicious.open', handleEvent );
-
-// Or again use jQuery for that
-$( 'document' ).off( 'burgerlicious.open', handleEvent );
-```
-
-The following is a complete event table. It presents the event names (short as well as long versions) and a description explaining when each event will be thrown.
-
-| Short  | Long                 | Description                               |
-| ------ | -------------------- | ----------------------------------------- |
-| open   | burgerlicious.open   | Burger starts turning into an x           |
-| opened | burgerlicious.opened | Burger is done turning into an x          |
-| close  | burgerlicious.close  | Burger starts turning back into a burger  |
-| closed | burgerlicious.closed | Burger is done turning back into a burger |
-
-<br>
-
-## Browser support
-
-This library should work fine with the following browsers:
-- latest versions of Mozilla Firefox
-- latest versions of Google Chrome
-- latest versions of Opera
-- latest versions of Safari
-
-This library does not work with the following browsers:
-- Internet Explorer
-- Microsoft Edge
-
-> Improvments concerning browser support could be one of the next development steps here.
-
-<br>
+<br><br><br>
 
 ## Creator
 
 **Dominique Müller**
 
-- E-Mail: [hello@dominique-mueller.de](mailto:hello@dominique-mueller.de)
-- Website: [www.dominique-mueller.de](https://www.dominique-mueller.de/)
-- Twitter: [@itsdevdom](https://twitter.com/itsdevdom)
+- E-Mail: **[dominique.m.mueller@gmail.com](mailto:dominique.m.mueller@gmail.com)**
+- Website: **[www.devdom.io](https://www.devdom.io/)**
+- Twitter: **[@itsdevdom](https://twitter.com/itsdevdom)**

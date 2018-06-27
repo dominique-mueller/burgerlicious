@@ -2,7 +2,7 @@
 node_modules
 
 # Build - disabled so that Travis CI can do its thing
-# build
+dist
 
 # Development stuff
 *.todo
