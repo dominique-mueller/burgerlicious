@@ -1,36 +1,26 @@
 {
-	"name": "burgerlicious",
-	"description": "Yummy! Burgerlicious is the animated burger icon you always wanted.<br>SVG-based, customizable via SASS, dependency-free.",
-	"version": "2.0.0",
-	"author": {
-		"name": "Dominique Müller",
-		"email": "dominique.m.mueller@gmail.com",
-		"url": "https://www.devdom.io/"
-	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/dominique-mueller/burgerlicious.git"
-	},
-	"homepage": "https://github.com/dominique-mueller/burgerlicious",
-	"bugs": {
-		"url": "https://github.com/dominique-mueller/burgerlicious/issues"
-	},
-	"keywords": [
-		"burgerlicious",
-		"burger",
-		"icon",
-		"menu",
-		"animated",
-		"svg"
-	],
-	"scripts": {
-		"build": "node-sass ./src/burgerlicious.scss ./dist/src/burgerlicious.css && copyfiles ./src/* ./docs/* package.json CHANGELOG.md LICENSE README.md dist",
-		"clean": "rimraf -r dist/**"
-	},
-	"devDependencies": {
-		"copyfiles": "2.0.x",
-		"node-sass": "4.9.x",
-		"rimraf": "2.6.x"
-	}
+  "name": "burgerlicious",
+  "description": "Yummy! Burgerlicious is the animated burger icon you always wanted.<br>SVG-based, customizable via SASS, dependency-free.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dominique-mueller/burgerlicious.git"
+  },
+  "keywords": [
+    "burgerlicious",
+    "burger",
+    "icon",
+    "menu",
+    "animated",
+    "svg"
+  ],
+  "scripts": {
+    "build": "rimraf -r dist/** && node-sass ./src/burgerlicious.scss ./dist/src/burgerlicious.css && copyfiles ./src/* ./docs/* package.json README.md CHANGELOG.md LICENSE dist"
+  },
+  "devDependencies": {
+    "copyfiles": "2.4.x",
+    "node-sass": "5.0.x",
+    "rimraf": "3.0.x"
+  }
 }
