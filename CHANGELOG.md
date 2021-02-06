@@ -1,12 +1,12 @@
 # Changelog
 
-Similar to our [GitHub releases page](https://github.com/dominique-mueller/burgerlicious/releases).
+Also see [GitHub releases](https://github.com/dominique-mueller/burgerlicious/releases).
 
 <br>
 
 ## [2.0.0](https://github.com/dominique-mueller/burgerlicious/releases/tag/2.0.0) (2018-06-27)
 
-**Refactor**
+**Refactorings**
 
 * Refactor SVG code
 * Refactor CSS into configurable SASS
@@ -19,22 +19,22 @@ Similar to our [GitHub releases page](https://github.com/dominique-mueller/burge
 **BREAKING CHANGES**
 
 * Burgerlicious no longer comes with JavaScript code - that must now be written by the application itself. This makes burgerlicious
-framework-independent.
+  framework-independent.
 * Burgerlicious comes with a new HTML structure and re-written SASS styles
 
 <br>
 
 ## [1.0.2](https://github.com/dominique-mueller/burgerlicious/releases/tag/1.0.2) (2016-02-22)
 
-**Bugfixes**
+**Bug Fixes**
 
-* Added main files into NPM and bower manifests
+* Add main files into NPM and bower manifests
 
 **Development**
 
-* Added .github folder (containing CONTRIBUTING guideline and issue template)
-* Updated and fixed Gulp tasks
-* Updated NPM dependencies
+* Add .github folder (containing CONTRIBUTING guideline and issue template)
+* Update and fixed Gulp tasks
+* Update NPM dependencies
 
 <br>
 
@@ -42,24 +42,20 @@ framework-independent.
 
 **Bugfixes**
 
-* Fixed rotation center issue when lineThickness set to an odd number
+* Fix rotation center issue when lineThickness set to an odd number
 
 **Documentation**
 
-* Added badges
-* Added representative screenshot
-* Extended description
+* Add badges
+* Add representative screenshot
+* Extend description
 
 **Development**
 
-* Untracked build files from git
+* Untrack build files from git
 
 <br>
 
 ## [1.0.0](https://github.com/dominique-mueller/burgerlicious/releases/tag/1.0.0) (2016-02-10)
 
-**Initial first release**
-
-* Features of highest priority are implemeted (first stable API)
-* Development automation with Gulp tasks
-* Package Manager support for Bower and NPM
+**Initial release**
