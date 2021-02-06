@@ -40,7 +40,7 @@ Also see [GitHub releases](https://github.com/dominique-mueller/burgerlicious/re
 
 ## [1.0.1](https://github.com/dominique-mueller/burgerlicious/releases/tag/1.0.1) (2016-02-11)
 
-**Bugfixes**
+**Bug Fixes**
 
 * Fix rotation center issue when lineThickness set to an odd number
 
