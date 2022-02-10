@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "copyfiles": "2.4.x",
-    "node-sass": "5.0.x",
+    "node-sass": "7.0.x",
     "rimraf": "3.0.x"
   }
 }
